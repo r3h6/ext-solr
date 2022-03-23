@@ -64,7 +64,6 @@ class PageIndexerFinisher implements MiddlewareInterface
             $body->write($content);
             $response = $response
                 ->withBody($body)
-                ->withHeader('Content-Length',  (string)strlen($content))
                 ->withHeader('Content-Type',  'application/json');
         }
         return $response;
